@@ -28,11 +28,6 @@ public class Formula implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "productId")
 	private List<Product> listProducts;
-	
-	
-	public Formula() {
-	}
-
 
 	public String getFormulaName() {
 		return formulaName;

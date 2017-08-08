@@ -15,28 +15,7 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-annotations</artifactId>
-    	<version>3.5.0-Final</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-entitymanager</artifactId>
-    	<version>5.1.0.Final</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-core</artifactId>
-    	<version>5.1.0.Final</version>
-    </dependency>
-    <dependency>
+  	<dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-asm</artifactId>
     	<version>3.1.2.RELEASE</version>
@@ -76,6 +55,22 @@
     	<artifactId>spring-boot-starter-thymeleaf</artifactId>
     	<version>1.4.4.RELEASE</version>
     </dependency>
+  
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-annotations</artifactId>
+    	<version>3.5.0-Final</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-entitymanager</artifactId>
+    	<version>5.1.0.Final</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>5.1.0.Final</version>
+    </dependency>
     <dependency>
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate-validator</artifactId>
@@ -83,10 +78,32 @@
     </dependency>
     <dependency>
     	<groupId>org.hibernate</groupId>
-    	<artifactId>
-    		hibernate-validator-annotation-processor
-    	</artifactId>
+    	<artifactId>hibernate-validator-annotation-processor</artifactId>
     	<version>4.1.0.Final</version>
     </dependency>
+    
+<!-- 	<dependency> -->
+<!-- 		<groupId>org.hibernate</groupId> -->
+<!-- 		<artifactId>hibernate-entitymanager</artifactId> -->
+<!-- 		<version>3.6.0.Final</version> -->
+<!-- 	</dependency> -->
+	
+<!-- 	<dependency> -->
+<!-- 		<groupId>org.hibernate</groupId> -->
+<!-- 		<artifactId>hibernate-validator</artifactId> -->
+<!-- 		<version>4.1.0.Final</version> -->
+<!-- 	</dependency> -->
+	<dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	<!-- MySql connector -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.6</version>
+	</dependency>
   </dependencies>
 </project>

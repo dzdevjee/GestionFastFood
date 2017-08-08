@@ -1,4 +1,5 @@
 package dz.dzDevs.GestionFastFood.Entity;
+
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,70 +11,57 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "User")
-public class User {
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-private int userId ;
-@Column(name = "userFirstName")
-private String userFirstName;
-@Column(name = "userLastName")
-private String userLastName;
-@Column(name = "userLogin")
-private String userLogin;
-@Column(name = "userPassword")
-private String userPassword;
-@ManyToOne
-@JoinColumn(name = "roleId")
-private Role userRole;
+@Table(name = "USER")
+public class User implements Serializable  {
+	private static final long serialVersionUID = -5146869436163390075L;
 
-public User(int userId, String userFirstName, String userLastName, String userLogin, String userPassword, Role userRole) {
-	super();
-	this.userId = userId;
-	this.userFirstName = userFirstName;
-	this.userLastName = userLastName;
-	this.userLogin = userLogin;
-	this.userPassword = userPassword;
-	this.userRole = userRole;
-}
-public User(){
+	//Attributs
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int userId ;
+	@Column(name = "userName")
+	private String userName;
+	@Column(name = "userLastName")
+	private String userLastName;
+	@Column(name = "userLogin")
+	private String userLogin;
+	@Column(name = "userPassword")
+	private String userPassword;
+	@ManyToOne
+	@JoinColumn(name = "roleId")
+	private Role userRole;
 
-}
-public int getuserId() {
-	return userId;
-}
-public void setuserId(int userId) {
-	this.userId = userId;
-}
-public String getuserFirstName() {
-	return userFirstName;
-}
-public void setuserFirstName(String userFirstName) {
-	this.userFirstName = userFirstName;
-}
-public String getuserLastName() {
-	return userLastName;
-}
-public void setuserLastName(String userLastName) {
-	this.userLastName = userLastName;
-}
-public String getuserLogin() {
-	return userLogin;
-}
-public void setuserLogin(String userLogin) {
-	this.userLogin = userLogin;
-}
-public String getuserPassword() {
-	return userPassword;
-}
-public void setuserPassword(String userPassword) {
-	this.userPassword = userPassword;
-}
-public Role getuserRole() {
-	return userRole;
-}
-public void setuserRole(Role userRole) {
-	this.userRole = userRole;
-}
-
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getUserLastName() {
+		return userLastName;
+	}
+	public void setUserLastName(String userLastName) {
+		this.userLastName = userLastName;
+	}
+	public String getUserLogin() {
+		return userLogin;
+	}
+	public void setUserLogin(String userLogin) {
+		this.userLogin = userLogin;
+	}
+	public String getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+	public Role getUserRole() {
+		return userRole;
+	}
+	public void setUserRole(Role userRole) {
+		this.userRole = userRole;
+	}
+	public int getUserId() {
+		return userId;
+	}
 }
