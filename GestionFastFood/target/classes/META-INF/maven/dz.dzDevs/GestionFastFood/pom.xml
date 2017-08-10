@@ -55,12 +55,6 @@
     	<artifactId>spring-boot-starter-thymeleaf</artifactId>
     	<version>1.4.4.RELEASE</version>
     </dependency>
-  
-    <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-annotations</artifactId>
-    	<version>3.5.0-Final</version>
-    </dependency>
     <dependency>
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate-entitymanager</artifactId>
@@ -72,27 +66,10 @@
     	<version>5.1.0.Final</version>
     </dependency>
     <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-validator</artifactId>
-    	<version>5.3.4.Final</version>
+      <groupId>org.hibernate.common</groupId>
+      <artifactId>hibernate-commons-annotations</artifactId>
+      <version>5.0.1.Final</version>
     </dependency>
-    <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-validator-annotation-processor</artifactId>
-    	<version>4.1.0.Final</version>
-    </dependency>
-    
-<!-- 	<dependency> -->
-<!-- 		<groupId>org.hibernate</groupId> -->
-<!-- 		<artifactId>hibernate-entitymanager</artifactId> -->
-<!-- 		<version>3.6.0.Final</version> -->
-<!-- 	</dependency> -->
-	
-<!-- 	<dependency> -->
-<!-- 		<groupId>org.hibernate</groupId> -->
-<!-- 		<artifactId>hibernate-validator</artifactId> -->
-<!-- 		<version>4.1.0.Final</version> -->
-<!-- 	</dependency> -->
 	<dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

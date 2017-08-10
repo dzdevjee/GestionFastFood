@@ -27,7 +27,9 @@ public class Formula implements Serializable {
 	private Double formulaPrice;
 	@ManyToOne
 	@JoinColumn(name = "productId")
-	private List<Product> listProducts;
+	private Product productId;
+
+//	private List<Product> listProducts;
 
 	public String getFormulaName() {
 		return formulaName;
@@ -49,18 +51,28 @@ public class Formula implements Serializable {
 	}
 
 
-	public List<Product> getListProducts() {
-		return listProducts;
-	}
-
-
-	public void setListProducts(List<Product> listProducts) {
-		this.listProducts = listProducts;
-	}
+//	public List<Product> getListProducts() {
+//		return listProducts;
+//	}
+//
+//
+//	public void setListProducts(List<Product> listProducts) {
+//		this.listProducts = listProducts;
+//	}
 
 
 	public int getFormulaId() {
 		return formulaId;
+	}
+
+
+	public Product getProductId() {
+		return productId;
+	}
+
+
+	public void setProductId(Product productId) {
+		this.productId = productId;
 	}
 
 }

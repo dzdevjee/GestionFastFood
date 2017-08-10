@@ -1,7 +1,7 @@
 package dz.dzDevs.GestionFastFood.Entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -30,15 +30,15 @@ public class Command implements Serializable  {
 	private double commandTotal;
 	@Column(name = "commandState")
 	private String commandState;
-	@ManyToOne
-	@JoinColumn(name = "userId")
-	private List<User> listUsers;
-	@ManyToOne
-	@JoinColumn(name = "formulaId")
-	private List<Formula> listFormulas;
-	@ManyToOne
-	@JoinColumn(name="productId")
-	private List<Product> listProducts;
+//	@ManyToOne
+//	@JoinColumn(name = "userId")
+//	private List<User> listUsers;
+//	@ManyToOne
+//	@JoinColumn(name = "formulaId")
+//	private List<Formula> listFormulas;
+//	@ManyToOne
+//	@JoinColumn(name="productId")
+//	private List<Product> listProducts;
 	// TODO faire l'annotation
 //	@OneToMany
 //	@JoinColumn(name = "tableId")
@@ -68,24 +68,24 @@ public class Command implements Serializable  {
 	public void setCommandState(String commandState) {
 		this.commandState = commandState;
 	}
-	public List<User> getListUsers() {
-		return listUsers;
-	}
-	public void setListUsers(List<User> listUsers) {
-		this.listUsers = listUsers;
-	}
-	public List<Formula> getListFormulas() {
-		return listFormulas;
-	}
-	public void setListFormulas(List<Formula> listFormulas) {
-		this.listFormulas = listFormulas;
-	}
-	public List<Product> getListProducts() {
-		return listProducts;
-	}
-	public void setListProducts(List<Product> listProducts) {
-		this.listProducts = listProducts;
-	}
+//	public List<User> getListUsers() {
+//		return listUsers;
+//	}
+//	public void setListUsers(List<User> listUsers) {
+//		this.listUsers = listUsers;
+//	}
+//	public List<Formula> getListFormulas() {
+//		return listFormulas;
+//	}
+//	public void setListFormulas(List<Formula> listFormulas) {
+//		this.listFormulas = listFormulas;
+//	}
+//	public List<Product> getListProducts() {
+//		return listProducts;
+//	}
+//	public void setListProducts(List<Product> listProducts) {
+//		this.listProducts = listProducts;
+//	}
 	public int getCommandId() {
 		return commandId;
 	}
