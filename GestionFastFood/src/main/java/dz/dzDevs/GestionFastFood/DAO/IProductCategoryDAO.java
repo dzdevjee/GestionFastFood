@@ -5,9 +5,9 @@ import dz.dzDevs.GestionFastFood.Entity.ProductCategory;
 
 public interface IProductCategoryDAO {
 	public void 					createCategory(ProductCategory category);
-	public void 					updateProductCategory(ProductCategory category);
-	public void 					deleteProductCategory(int categoryId);
-	public ProductCategory 			findProductCategoryById(int categoryId);
-	public ProductCategory 			findProductCategoryByName(String categoryName);
-	public List<ProductCategory> 	listProductCategorys();
+	public void 					updateCategory(ProductCategory category);
+	public void 					deleteCategory(int categoryId);
+	public ProductCategory 			findCategoryById(int categoryId);
+	public ProductCategory 			findCategoryByName(String categoryName);
+	public List<ProductCategory> 	listCategorys();
 }

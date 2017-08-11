@@ -37,6 +37,6 @@ public class RoleDAOImpl implements IRoleDAO {
 	}
 
 	public List<Role> listRoles() {
-		return session.createQuery("select r from Role r").list();	
+		return session.createQuery("select o from Role o").list();	
 	}
 }
