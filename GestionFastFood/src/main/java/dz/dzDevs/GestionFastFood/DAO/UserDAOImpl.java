@@ -1,9 +1,7 @@
 package dz.dzDevs.GestionFastFood.DAO;
 
 import java.util.List;
-
 import org.hibernate.Session;
-
 import dz.dzDevs.GestionFastFood.Entity.User;
 import dz.dzDevs.GestionFastFood.Util.HibernateUtil;
 
