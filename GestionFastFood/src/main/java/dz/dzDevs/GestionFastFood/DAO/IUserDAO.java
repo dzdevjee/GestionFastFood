@@ -1,7 +1,6 @@
 package dz.dzDevs.GestionFastFood.DAO;
 
 import java.util.List;
-
 import dz.dzDevs.GestionFastFood.Entity.User;
 
 public interface IUserDAO {
