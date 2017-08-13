@@ -22,6 +22,7 @@ public class Command implements Serializable  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int commandId ;
+// TODO ajouter num command ??
 	@Column(name = "commandDate")
 	private Date commandDate;
 	@Column(name = "commandType")
@@ -30,6 +31,7 @@ public class Command implements Serializable  {
 	private double commandTotal;
 	@Column(name = "commandState")
 	private String commandState;
+	// TODO faire l'annotation
 //	@ManyToOne
 //	@JoinColumn(name = "userId")
 //	private List<User> listUsers;
@@ -39,7 +41,7 @@ public class Command implements Serializable  {
 //	@ManyToOne
 //	@JoinColumn(name="productId")
 //	private List<Product> listProducts;
-	// TODO faire l'annotation
+	
 //	@OneToMany
 //	@JoinColumn(name = "tableId")
 //	private int tableId;
