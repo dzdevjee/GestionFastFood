@@ -11,7 +11,11 @@ import dz.dzDevs.GestionFastFood.Entity.User;
 @Service("CashierService")
 @Transactional
 public class CashierServiceImpl implements ICashierService {
-	@Autowired CommandDAOImpl commandDAOImpl;
+	protected final CommandDAOImpl commandDAOImpl;
+	@Autowired
+	public CashierServiceImpl(CommandDAOImpl commandDAOImpl){
+	 this.commandDAOImpl=commandDAOImpl;
+	}
 	
 	public void createCommand(User user, Command command) {
 		// TODO Auto-generated method stub
