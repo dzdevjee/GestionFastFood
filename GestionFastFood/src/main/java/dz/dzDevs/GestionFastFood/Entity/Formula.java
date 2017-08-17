@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,8 +26,7 @@ public class Formula implements Serializable {
 	private String formulaName;
 	@Column(name = "formulaPrice")
 	private Double formulaPrice;
-	@ManyToOne
-	@JoinColumn(name = "productId")
+	@OneToMany(mappedBy="productId")
 	private List<Product> listProducts;
 
 //	private List<Product> listProducts;

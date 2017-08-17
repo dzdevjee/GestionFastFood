@@ -3,6 +3,7 @@ package dz.dzDevs.GestionFastFood.Entity;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,7 +31,9 @@ public class User implements Serializable  {
 	@ManyToOne
 	@JoinColumn(name = "roleId")
 	private Role userRole;
-
+	  @ManyToOne(fetch=FetchType.LAZY)
+	  @JoinColumn(name="commandId")
+	  private Command command;
 	public String getUserName() {
 		return userName;
 	}

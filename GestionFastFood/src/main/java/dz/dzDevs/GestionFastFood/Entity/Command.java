@@ -33,19 +33,15 @@ public class Command implements Serializable  {
 	@Column(name = "commandState")
 	private String commandState;
 	// TODO faire l'annotation
-	@ManyToOne
-	@JoinColumn(name = "userId")
+	@OneToMany(mappedBy="command")
 	private List<User> listUsers;
-	@ManyToOne
-	@JoinColumn(name = "formulaId")
+	@OneToMany(mappedBy="formulaId")
 	private List<Formula> listFormulas;
-	@ManyToOne
-	@JoinColumn(name="productId")
+	@OneToMany(mappedBy="productId")
 	private List<Product> listProducts;
 	
-	@OneToMany
-	@JoinColumn(name = "tableId")
-	private int tableId;
+	@OneToMany(mappedBy="tableId")
+	private List<Tables> tables;
 
 	public String getCommandType() {
 		return commandType;
