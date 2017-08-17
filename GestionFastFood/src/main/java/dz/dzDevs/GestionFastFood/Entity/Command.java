@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -32,19 +33,19 @@ public class Command implements Serializable  {
 	@Column(name = "commandState")
 	private String commandState;
 	// TODO faire l'annotation
-//	@ManyToOne
-//	@JoinColumn(name = "userId")
-//	private List<User> listUsers;
-//	@ManyToOne
-//	@JoinColumn(name = "formulaId")
-//	private List<Formula> listFormulas;
-//	@ManyToOne
-//	@JoinColumn(name="productId")
-//	private List<Product> listProducts;
+	@ManyToOne
+	@JoinColumn(name = "userId")
+	private List<User> listUsers;
+	@ManyToOne
+	@JoinColumn(name = "formulaId")
+	private List<Formula> listFormulas;
+	@ManyToOne
+	@JoinColumn(name="productId")
+	private List<Product> listProducts;
 	
-//	@OneToMany
-//	@JoinColumn(name = "tableId")
-//	private int tableId;
+	@OneToMany
+	@JoinColumn(name = "tableId")
+	private int tableId;
 
 	public String getCommandType() {
 		return commandType;
@@ -70,24 +71,24 @@ public class Command implements Serializable  {
 	public void setCommandState(String commandState) {
 		this.commandState = commandState;
 	}
-//	public List<User> getListUsers() {
-//		return listUsers;
-//	}
-//	public void setListUsers(List<User> listUsers) {
-//		this.listUsers = listUsers;
-//	}
-//	public List<Formula> getListFormulas() {
-//		return listFormulas;
-//	}
-//	public void setListFormulas(List<Formula> listFormulas) {
-//		this.listFormulas = listFormulas;
-//	}
-//	public List<Product> getListProducts() {
-//		return listProducts;
-//	}
-//	public void setListProducts(List<Product> listProducts) {
-//		this.listProducts = listProducts;
-//	}
+	public List<User> getListUsers() {
+		return listUsers;
+	}
+	public void setListUsers(List<User> listUsers) {
+		this.listUsers = listUsers;
+	}
+	public List<Formula> getListFormulas() {
+		return listFormulas;
+	}
+	public void setListFormulas(List<Formula> listFormulas) {
+		this.listFormulas = listFormulas;
+	}
+	public List<Product> getListProducts() {
+		return listProducts;
+	}
+	public void setListProducts(List<Product> listProducts) {
+		this.listProducts = listProducts;
+	}
 	public int getCommandId() {
 		return commandId;
 	}

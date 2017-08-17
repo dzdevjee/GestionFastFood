@@ -24,7 +24,7 @@
         <property name="show_sql">true</property>
         
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
         
         <!-- Mention here all the model classes along with their package name -->
         <mapping class="dz.dzDevs.GestionFastFood.Entity.Command"/>

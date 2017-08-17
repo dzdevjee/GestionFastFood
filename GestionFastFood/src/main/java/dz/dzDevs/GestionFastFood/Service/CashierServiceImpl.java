@@ -19,6 +19,7 @@ public class CashierServiceImpl implements ICashierService {
 	
 	public void createCommand(User user, Command command) {
 		// TODO Auto-generated method stub
+		command.getListUsers().add(user);
 		commandDAOImpl.createCommand(command);
 	}
 
