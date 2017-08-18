@@ -35,12 +35,12 @@ public class Command implements Serializable  {
 	// TODO faire l'annotation
 	@OneToMany(mappedBy="command")
 	private List<User> listUsers;
-	@OneToMany(mappedBy="formulaId")
+	@OneToMany(mappedBy="command")
 	private List<Formula> listFormulas;
-	@OneToMany(mappedBy="productId")
+	@OneToMany(mappedBy="command")
 	private List<Product> listProducts;
 	
-	@OneToMany(mappedBy="tableId")
+	@OneToMany(mappedBy="command")
 	private List<Tables> tables;
 
 	public String getCommandType() {

@@ -2,7 +2,6 @@ package dz.dzDevs.GestionFastFood.Entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import javax.persistence.Table;
 
 @Entity
 @Table(name = "PRODUCT")
@@ -22,7 +21,9 @@ public class Product implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "categoryId")
 	private ProductCategory category;
-
+	  @ManyToOne(fetch=FetchType.LAZY)
+	  @JoinColumn(name="commandId")
+	  private Command command;
 	public Product () {
 	}
 

@@ -3,9 +3,12 @@ package dz.dzDevs.GestionFastFood.Entity;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,7 +25,9 @@ public class Tables implements Serializable  {
     private String tableName;
 	@Column(name = "tableSeats")
     private int tableSeats;
-
+	  @ManyToOne(fetch=FetchType.LAZY)
+	  @JoinColumn(name="commandId")
+	  private Command command;
 	public int getTableId() {
 		return tableId;
 	}

@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -28,7 +29,9 @@ public class Formula implements Serializable {
 	private Double formulaPrice;
 	@OneToMany(mappedBy="productId")
 	private List<Product> listProducts;
-
+	  @ManyToOne(fetch=FetchType.LAZY)
+	  @JoinColumn(name="commandId")
+	  private Command command;
 //	private List<Product> listProducts;
 
 	public String getFormulaName() {
