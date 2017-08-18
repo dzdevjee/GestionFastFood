@@ -31,6 +31,12 @@ public class Tables implements Serializable  {
 	public int getTableId() {
 		return tableId;
 	}
+	public Command getCommand() {
+		return command;
+	}
+	public void setCommand(Command command) {
+		this.command = command;
+	}
 	public String getTableName() {
 		return tableName;
 	}

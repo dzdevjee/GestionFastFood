@@ -34,6 +34,16 @@ public class Formula implements Serializable {
 	  private Command command;
 //	private List<Product> listProducts;
 
+	public Command getCommand() {
+		return command;
+	}
+
+
+	public void setCommand(Command command) {
+		this.command = command;
+	}
+
+
 	public String getFormulaName() {
 		return formulaName;
 	}

@@ -31,6 +31,18 @@ public class Product implements Serializable {
 		return productId;
 	}
 
+	public Command getCommand() {
+		return command;
+	}
+
+	public void setCommand(Command command) {
+		this.command = command;
+	}
+
+	public void setCategory(ProductCategory category) {
+		this.category = category;
+	}
+
 	public String getProductName() {
 		return productName;
 	}

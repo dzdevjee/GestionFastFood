@@ -40,6 +40,12 @@ public class Command implements Serializable  {
 	@OneToMany(mappedBy="command")
 	private List<Product> listProducts;
 	
+	public List<Tables> getTables() {
+		return tables;
+	}
+	public void setTables(List<Tables> tables) {
+		this.tables = tables;
+	}
 	@OneToMany(mappedBy="command")
 	private List<Tables> tables;
 

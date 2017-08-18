@@ -25,7 +25,13 @@ public class ProductCategory implements Serializable {
 	private int categoryId;
 	@Column(name="nomCat")
 	private String categoryName;
-	 @OneToMany(mappedBy="category")
+	 public List<Product> getListproducts() {
+		return listproducts;
+	}
+	public void setListproducts(List<Product> listproducts) {
+		this.listproducts = listproducts;
+	}
+	@OneToMany(mappedBy="category")
 	 List<Product> listproducts;
 	public ProductCategory() {
 	}

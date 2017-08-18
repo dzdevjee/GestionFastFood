@@ -37,6 +37,12 @@ public class User implements Serializable  {
 	public String getUserName() {
 		return userName;
 	}
+	public Command getCommand() {
+		return command;
+	}
+	public void setCommand(Command command) {
+		this.command = command;
+	}
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
