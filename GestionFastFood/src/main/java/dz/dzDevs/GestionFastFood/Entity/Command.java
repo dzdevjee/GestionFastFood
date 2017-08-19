@@ -94,4 +94,16 @@ public class Command implements Serializable  {
 	public int getCommandId() {
 		return commandId;
 	}
+	@Override
+	public String toString() {
+		return "Command [commandId=" + commandId + ", commandDate="
+				+ commandDate + ", commandType=" + commandType
+				+ ", commandTotal=" + commandTotal + ", commandState="
+				+ commandState + ", listUsers=" + listUsers + ", listFormulas="
+				+ listFormulas + ", listProducts=" + listProducts + ", tables="
+				+ tables + "]";
+	}
+	public void printVoucher() {
+		System.out.println(this.toString());
+	}
 }

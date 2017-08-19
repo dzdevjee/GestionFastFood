@@ -1,200 +1,199 @@
 package dz.dzDevs.GestionFastFood.Service;
 
 import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import dz.dzDevs.GestionFastFood.Entity.Command;
-import dz.dzDevs.GestionFastFood.Entity.Formula;
-import dz.dzDevs.GestionFastFood.Entity.Product;
-import dz.dzDevs.GestionFastFood.Entity.ProductCategory;
-import dz.dzDevs.GestionFastFood.Entity.Role;
-import dz.dzDevs.GestionFastFood.Entity.Tables;
-import dz.dzDevs.GestionFastFood.Entity.User;
+import dz.dzDevs.GestionFastFood.DAO.*;
+import dz.dzDevs.GestionFastFood.Entity.*;
 
 @Service("AdminService")
 @Transactional
 public class AdminServiceImpl implements IAdminService {
+	
+	protected CommandDAOImpl commandDAOImpl;
+	@Autowired
+	public AdminServiceImpl(CommandDAOImpl commandDAOImpl) {
+	 this.commandDAOImpl = commandDAOImpl;
+	}
+
+	protected ProductCategoryDAOImpl productCategoryDAOImpl;
+	@Autowired
+	public AdminServiceImpl(ProductCategoryDAOImpl productCategoryDAOImpl) {
+	 this.productCategoryDAOImpl = productCategoryDAOImpl;
+	}
+
+	protected ProductDAOImpl productDAOImpl;
+	@Autowired
+	public AdminServiceImpl(ProductDAOImpl productDAOImpl) {
+	 this.productDAOImpl = productDAOImpl;
+	}
+
+	protected FormulaDAOImpl formulaDAOImpl;
+	@Autowired
+	public AdminServiceImpl(FormulaDAOImpl formulaDAOImpl){
+	 this.formulaDAOImpl=formulaDAOImpl;
+	}
+
+	protected TablesDAOImpl  tablesDAOImpl;
+	@Autowired
+	public AdminServiceImpl(TablesDAOImpl  tablesDAOImpl){
+	 this.tablesDAOImpl = tablesDAOImpl;
+	}
+
+	protected UserDAOImpl userDAOImpl;
+	@Autowired
+	public AdminServiceImpl(UserDAOImpl userDAOImpl){
+	 this.userDAOImpl = userDAOImpl;
+	}
+	
+	protected RoleDAOImpl roleDAOImpl;
+	@Autowired
+	public AdminServiceImpl(RoleDAOImpl roleDAOImpl){
+	 this.roleDAOImpl = roleDAOImpl;
+	}
 
 	public void createUser(User user) {
-		// TODO Auto-generated method stub
-		
+		userDAOImpl.createUser(user);
 	}
 
 	public void updateUser(User user) {
-		// TODO Auto-generated method stub
-		
+		userDAOImpl.updateUser(user);
 	}
 
 	public void deleteUser(int idUser) {
-		// TODO Auto-generated method stub
-		
+		userDAOImpl.deleteUser(idUser);
 	}
 
 	public User findUserById(int idUser) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDAOImpl.findUserById(idUser);
 	}
 
 	public User findUserByLogin(String loginUser) {
-		// TODO Auto-generated method stub
-		return null;
+		return userDAOImpl.findUserByLogin(loginUser);
 	}
 
 	public List<User> listUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		return userDAOImpl.listUsers();
 	}
 
 	public void createRole(Role role) {
-		// TODO Auto-generated method stub
-		
+		roleDAOImpl.createRole(role);
 	}
 
 	public void updateRole(Role role) {
-		// TODO Auto-generated method stub
-		
+		roleDAOImpl.updateRole(role);
 	}
 
 	public void deleteRole(int roleId) {
-		// TODO Auto-generated method stub
-		
+	roleDAOImpl.deleteRole(roleId);
 	}
 
 	public Role findRoleById(int roleId) {
-		// TODO Auto-generated method stub
-		return null;
+		return roleDAOImpl.findRoleById(roleId);
 	}
 
 	public Role findRoleByName(String roleName) {
-		// TODO Auto-generated method stub
-		return null;
+		return roleDAOImpl.findRoleByName(roleName);
 	}
 
 	public List<Role> listRoles() {
-		// TODO Auto-generated method stub
-		return null;
+		return roleDAOImpl.listRoles();
 	}
 
 	public void createTable(Tables table) {
-		// TODO Auto-generated method stub
-		
+	   tablesDAOImpl.createTable(table);
 	}
 
 	public void updateTable(Tables table) {
-		// TODO Auto-generated method stub
-		
+		tablesDAOImpl.updateTable(table);
 	}
 
 	public void deleteTable(int tableId) {
-		// TODO Auto-generated method stub
-		
+		tablesDAOImpl.deleteTable(tableId);
 	}
 
 	public Tables findTableById(int tableId) {
-		// TODO Auto-generated method stub
-		return null;
+		return tablesDAOImpl.findTableById(tableId);
 	}
 
 	public List<Tables> listTables() {
-		// TODO Auto-generated method stub
-		return null;
+		return tablesDAOImpl.listTables();
 	}
 
 	public void addProduct(Product product) {
-		// TODO Auto-generated method stub
-		
+	     productDAOImpl.addProduct(product);
 	}
 
 	public void updateProduct(Product product) {
-		// TODO Auto-generated method stub
-		
+	     productDAOImpl.updateProduct(product);
 	}
 
 	public void deleteProduct(int productId) {
-		// TODO Auto-generated method stub
-		
+		productDAOImpl.deleteProduct(productId);
 	}
 
 	public Product findProductById(int productId) {
-		// TODO Auto-generated method stub
-		return null;
+		return productDAOImpl.findProductById(productId);
 	}
 
 	public List<Product> listProducts() {
-		// TODO Auto-generated method stub
-		return null;
+		return productDAOImpl.listProducts();
 	}
 
 	public void createCategory(ProductCategory category) {
-		// TODO Auto-generated method stub
-		
+		productCategoryDAOImpl.createCategory(category);
 	}
 
 	public void updateCategory(ProductCategory category) {
-		// TODO Auto-generated method stub
-		
+		productCategoryDAOImpl.updateCategory(category);
 	}
 
 	public void deleteCategory(int categoryId) {
-		// TODO Auto-generated method stub
-		
+		productCategoryDAOImpl.deleteCategory(categoryId);
 	}
 
 	public ProductCategory findCategoryById(int categoryId) {
-		// TODO Auto-generated method stub
-		return null;
+		return productCategoryDAOImpl.findCategoryById(categoryId);
 	}
 
 	public ProductCategory findCategoryByName(String categoryName) {
-		// TODO Auto-generated method stub
-		return null;
+		return  productCategoryDAOImpl.findCategoryByName(categoryName);
 	}
 
 	public List<ProductCategory> listCategorys() {
-		// TODO Auto-generated method stub
-		return null;
+		return productCategoryDAOImpl.listCategorys();
 	}
 
 	public void createFormula(Formula formula) {
-		// TODO Auto-generated method stub
-		
+		formulaDAOImpl.createFormula(formula);
 	}
 
 	public void updateFormula(Formula formula) {
-		// TODO Auto-generated method stub
-		
+		formulaDAOImpl.updateFormula(formula);
 	}
 
 	public void deleteFormula(int formulaId) {
-		// TODO Auto-generated method stub
-		
+		formulaDAOImpl.deleteFormula(formulaId);
 	}
 
 	public Formula findFormulaById(int formulaId) {
-		// TODO Auto-generated method stub
-		return null;
+		return formulaDAOImpl.findFormulaById(formulaId);
 	}
 
 	public Formula findFormulaByName(String formulaName) {
-		// TODO Auto-generated method stub
-		return null;
+		return formulaDAOImpl.findFormulaByName(formulaName);
 	}
 
 	public List<Formula> listFormulas() {
-		// TODO Auto-generated method stub
-		return null;
+		return formulaDAOImpl.listFormulas();
 	}
 
 	public Command findCommandById(int CommandId) {
-		// TODO Auto-generated method stub
-		return null;
+		return commandDAOImpl.findCommandById(CommandId);
 	}
 
 	public List<Command> listCommands() {
-		// TODO Auto-generated method stub
-		return null;
+		return commandDAOImpl.listCommands();
 	}
-
 }
