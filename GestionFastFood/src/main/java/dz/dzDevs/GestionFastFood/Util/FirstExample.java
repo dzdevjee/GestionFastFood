@@ -9,7 +9,7 @@ public class FirstExample {
 	public static void main(String[] args) {
 
 			IUserDAO usrDAO = new UserDAOImpl();
-			
+			//save
 			// Create
 			User u = new User();
 			u.setUserLastName("test");
