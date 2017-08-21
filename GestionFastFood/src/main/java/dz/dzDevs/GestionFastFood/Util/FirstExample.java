@@ -31,7 +31,7 @@ public class FirstExample {
 			}
 			
 			// Find
-			
+			//find
 			u = usrDAO.findUserById(1);
 
 			System.out.println("Id: " + u.getUserId());
