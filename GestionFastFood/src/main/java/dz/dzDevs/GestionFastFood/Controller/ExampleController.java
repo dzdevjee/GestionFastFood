@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +29,41 @@ public class ExampleController {
 //commands repository
 	@Autowired
 	CommandDAOImpl commands;
+	   @Autowired
+	    private UserValidator userValidator;
+	   
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(Model model, String error, String logout) {
+        if (error != null)
+            model.addAttribute("error", "Your username and password is invalid.");
+
+        if (logout != null)
+            model.addAttribute("message", "You have been logged out successfully.");
+
+        return "login";
+    }
+    
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public String registration(Model model) {
+        model.addAttribute("userForm", new User());
+
+        return "registration";
+    }
+    
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
+        userValidator.validate(userForm, bindingResult);
+
+        if (bindingResult.hasErrors()) {
+            return "registration";
+        }
+
+        users.createUser(userForm);
+
+        //securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
+
+        return "redirect:/welcome";
+    }
 
 	@RequestMapping("/User/{id}")
 	public String user(@PathVariable int id, Model model) {
@@ -72,6 +109,11 @@ public class ExampleController {
 
         model.addAttribute("users", users.listUsers());
         return "redirect:/users";
+    }
+    
+    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
+    public String welcome(Model model) {
+        return "welcome";
     }
 
 }

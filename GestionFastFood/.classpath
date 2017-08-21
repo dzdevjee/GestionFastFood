@@ -22,5 +22,23 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="E:/HR/java/mvnrepos/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar" sourcepath="E:/HR/java/mvnrepos/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.springframework.security"/>
+			<attribute name="maven.artifactId" value="spring-security-core"/>
+			<attribute name="maven.version" value="4.2.2.RELEASE"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/HR/java/mvnrepos/org/springframework/security/spring-security-config/4.2.2.RELEASE/spring-security-config-4.2.2.RELEASE.jar" sourcepath="E:/HR/java/mvnrepos/org/springframework/security/spring-security-config/4.2.2.RELEASE/spring-security-config-4.2.2.RELEASE-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.springframework.security"/>
+			<attribute name="maven.artifactId" value="spring-security-config"/>
+			<attribute name="maven.version" value="4.2.2.RELEASE"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
