@@ -31,7 +31,6 @@ public class FirstExample {
 			}
 			
 			// Find
-			//find
 			u = usrDAO.findUserById(1);
 
 			System.out.println("Id: " + u.getUserId());
@@ -39,7 +38,7 @@ public class FirstExample {
 			System.out.println("Name: " + u.getUserName());
 			System.out.println("Login: " + u.getUserLogin());
 			System.out.println("Password: " + u.getUserPassword());
-
+              
 			// Update
 			u.setUserLastName("Update");
 			u.setUserName("Update");
